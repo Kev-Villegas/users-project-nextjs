@@ -5,18 +5,19 @@ async function getUsers(id) {
 }
 async function UsersPage({ params }) {
   const user = await getUsers(params.id);
+  const { avatar, email, id, first_name, last_name } = user;
   return (
     <div className='row'>
       <div className='col-md-6 offset-md-3'>
         <div className='card text-center'>
           <div className='card-header'>
-            <img src={user.avatar} alt={user.email} />
+            <img src={avatar} alt={email} />
           </div>
-          <div className='card-body text-center'>
+          <div className='card-body text-right'>
             <h3>
-              {user.id} {user.first_name} {user.last_name}
+              {id} {first_name} {last_name}
             </h3>
-            <p>{user.email}</p>
+            <p>{email}</p>
           </div>
         </div>
       </div>
