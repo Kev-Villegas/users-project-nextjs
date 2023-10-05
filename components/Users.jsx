@@ -24,7 +24,7 @@ function Users({ users }) {
             alt={user.email}
             width={150}
             height={150}
-            style={{ borderRadius: '50%' }}
+            style={{ borderRadius: '55%' }}
           />
         </li>
       ))}
